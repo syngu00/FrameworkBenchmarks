@@ -10,7 +10,7 @@ COPY hello-spring-mongo hello-spring-mongo
 
 COPY pom.xml pom.xml
 
-RUN mvn package -q -P spring-mongo,spring-undertow
+RUN mvn package -q -P spring-mongo,spring-tomcat
 
 FROM eclipse-temurin:21-jre-alpine
 

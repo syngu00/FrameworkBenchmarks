@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fortunes</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>message</th>
+            </tr>
+            <tr th:each="fortune: ${fortunes}">
+                <td th:text="${fortune.id}"/>
+                <td th:text="${fortune.message}"/>
+            </tr>
+        </table>
+    </body>
+</html>

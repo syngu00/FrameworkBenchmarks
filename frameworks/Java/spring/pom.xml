@@ -8,62 +8,36 @@
 	<artifactId>hello-spring</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>hello-spring-interface</module>
+		<module>hello-spring-jdbc</module>
+		<module>hello-spring-jpa</module>
+		<module>hello-spring-mongo</module>
+		<module>hello-spring-app</module>
+	</modules>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.0</version>
+		<version>3.1.4</version>
 	</parent>
 
 	<properties>
-		<java.version>17</java.version>
-		<postgresql.version>42.5.1</postgresql.version>
+		<java.version>21</java.version>
+		<postgresql.version>42.6.0</postgresql.version>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mustache</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<debug>false</debug>
+					<release>${java.version}</release>
+					<enablePreview>true</enablePreview>
 				</configuration>
 			</plugin>
 		</plugins>
