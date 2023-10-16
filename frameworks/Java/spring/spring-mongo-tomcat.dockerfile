@@ -2,11 +2,13 @@ FROM maven:3-eclipse-temurin-21 as maven
 
 RUN mvn -version
 WORKDIR /spring
+
 COPY hello-spring-app hello-spring-app
 COPY hello-spring-interface hello-spring-interface
 COPY hello-spring-jdbc hello-spring-jdbc
 COPY hello-spring-jpa hello-spring-jpa
 COPY hello-spring-mongo hello-spring-mongo
+COPY hello-spring-tomcat hello-spring-tomcat
 
 COPY pom.xml pom.xml
 

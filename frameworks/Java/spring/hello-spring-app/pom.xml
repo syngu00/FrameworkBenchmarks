@@ -97,8 +97,9 @@
             <id>spring-tomcat</id>
             <dependencies>
                 <dependency>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-web</artifactId>
+                    <groupId>hello</groupId>
+                    <artifactId>hello-spring-tomcat</artifactId>
+                    <version>1.0-SNAPSHOT</version>
                 </dependency>
             </dependencies>
         </profile>

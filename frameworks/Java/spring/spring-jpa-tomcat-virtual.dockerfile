@@ -12,7 +12,7 @@ COPY hello-spring-tomcat hello-spring-tomcat
 
 COPY pom.xml pom.xml
 
-RUN mvn package -q -P spring-mongo,spring-undertow
+RUN mvn package -q -P spring-jpa,spring-tomcat
 
 FROM eclipse-temurin:21-jre-alpine
 
@@ -21,4 +21,4 @@ COPY --from=maven /spring/hello-spring-app/target/hello-spring-app-1.0-SNAPSHOT.
 
 EXPOSE 8080
 
-CMD ["java", "-Dlogging.level.root=OFF", "-jar", "app.jar", "--spring.profiles.active=mongo"]
+CMD ["java", "-Dlogging.level.root=OFF", "-jar", "app.jar", "--spring.profiles.active=jpa,virtual"]

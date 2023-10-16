@@ -16,6 +16,7 @@
 		<module>hello-spring-jpa</module>
 		<module>hello-spring-mongo</module>
 		<module>hello-spring-app</module>
+		<module>hello-spring-tomcat</module>
 	</modules>
 
 	<parent>
