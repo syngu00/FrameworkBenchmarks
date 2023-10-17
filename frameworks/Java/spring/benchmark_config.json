@@ -6,6 +6,7 @@
         "json_url": "/json",
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "plaintext_url": "/plaintext",
         "update_url": "/updates?queries=",
@@ -28,6 +29,7 @@
       "jpa": {
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "update_url": "/updates?queries=",
         "port": 8080,
@@ -49,6 +51,7 @@
       "mongo": {
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "update_url": "/updates?queries=",
         "port": 8080,
@@ -71,6 +74,7 @@
         "json_url": "/json",
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "plaintext_url": "/plaintext",
         "update_url": "/updates?queries=",
@@ -93,6 +97,7 @@
       "jpa-tomcat": {
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "update_url": "/updates?queries=",
         "port": 8080,
@@ -114,6 +119,7 @@
       "mongo-tomcat": {
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "update_url": "/updates?queries=",
         "port": 8080,
@@ -136,6 +142,7 @@
         "json_url": "/json",
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "plaintext_url": "/plaintext",
         "update_url": "/updates?queries=",
@@ -151,13 +158,14 @@
         "webserver": "None",
         "os": "Linux",
         "database_os": "Linux",
-        "display_name": "spring-jdbc-tomcat",
+        "display_name": "spring-jdbc-tomcat-virtual",
         "notes": "",
         "versus": ""
       },
       "jpa-tomcat-virtual": {
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "update_url": "/updates?queries=",
         "port": 8080,
@@ -172,13 +180,14 @@
         "webserver": "None",
         "os": "Linux",
         "database_os": "Linux",
-        "display_name": "spring-jpa-tomcat",
+        "display_name": "spring-jpa-tomcat-virtual",
         "notes": "",
         "versus": "spring"
       },
       "mongo-tomcat-virtual": {
         "db_url": "/db",
         "query_url": "/queries?queries=",
+        "cached_query_url": "/cached_queries?queries=",
         "fortune_url": "/fortunes",
         "update_url": "/updates?queries=",
         "port": 8080,
@@ -193,7 +202,7 @@
         "webserver": "None",
         "os": "Linux",
         "database_os": "Linux",
-        "display_name": "spring-mongo-tomcat",
+        "display_name": "spring-mongo-tomcat-virtual",
         "notes": "",
         "versus": "spring"
       }
