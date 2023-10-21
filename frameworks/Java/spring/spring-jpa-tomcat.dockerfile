@@ -1,4 +1,4 @@
-FROM maven:3-eclipse-temurin-21 as maven
+FROM maven:3-eclipse-temurin-19 as maven
 
 RUN mvn -version
 WORKDIR /spring
@@ -14,11 +14,11 @@ COPY pom.xml pom.xml
 
 RUN mvn package -q -P spring-jpa,spring-tomcat
 
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:19-jre-focal
 
 WORKDIR /spring
 COPY --from=maven /spring/hello-spring-app/target/hello-spring-app-1.0-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-Dlogging.level.root=OFF", "-jar", "app.jar", "--spring.profiles.active=jpa"]
+CMD ["java", "-XX:+UseNUMA", "-XX:+UseG1GC", "-XX:+DisableExplicitGC", "-XX:+UseStringDeduplication", "-Dlogging.level.root=OFF", "-jar", "app.jar", "--spring.profiles.active=jpa"]
